@@ -15,9 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from auction.views import AuctionItemViewSet, BidViewSet 
+
+
+router = DefaultRouter()
+# create url endpoints
+router.register('Item', AuctionItemViewSet)
+router.register('bid', BidViewSet)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     path('authentication/', include('users.urls')),
+    path('v1/', include(router.urls)), # Version 1 of our API
+    path('newAuction/', include('auction.urls')),
 ]

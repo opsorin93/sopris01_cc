@@ -1,6 +1,3 @@
-from django.shortcuts import render
-
-# Create your views here.
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
@@ -10,8 +7,8 @@ import requests
 from .serializers import CreateUserSerializer
 
 
-CLIENT_ID = 'A8W8hIvpVgyg5PEErFAYw8Q0ca2rD2gdlqK4tKsc'
-CLIENT_SECRET = 'TGwIlPuy8meJUC01LF1gUxpmuwFF4QJ8w21RDNbJVA4swTJxikRn3i3rbF3qivw66bWC1bLrLOXQUJkTt6PK2MWw40DRXm1eAblhnUDT6AkB6zcZmN2nua1ypddtSfsO'
+CLIENT_ID = 'ABwJxrDsxZUOvVcOeGUsUzxX5lqWs6atupO9nKqj'
+CLIENT_SECRET = 'WLcYaDgNxSYkPdgkQwG42jyMWRmH4Xue8c76B0FJYZr13xuulq1nvYjZEWJWbwr8wTIhMQnZNkrTqkZyEbrVDUc70sfTbJdp2fP8OBr5SAv0z7R2kzq2GRVljOJFYd73'
 
 
 IP_token = 'http://193.61.36.135:8000/o/token/'
